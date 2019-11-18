@@ -1,15 +1,16 @@
 widthImg=500;
-heightImg=400
+heightImg=400;
+j=100;
 #Variabile di appoggio
 app=0
 def setup():
-    global i, img, app,answer, widthImg, heightImg
+    global i, img, app,answer, widthImg, heightImg, lett
     #Messaggio mostrato a video appena viene eseguito lo script
     messaggio=input ("Inserisci la tua frase")
     println( str(messaggio))
-    #Variabile di appoggio che prende la prima lettera della parola
-    app=messaggio[0]
-    print(app)
+    #lett prende la prima lettera della parola
+    lett=messaggio[0]
+    print(lett)
     size(500, 400)
     #Creo l'immagione
     img=createImage(widthImg,heightImg,RGB)
@@ -18,18 +19,17 @@ def setup():
 def input(message=""):
     from javax.swing import JOptionPane 
     return JOptionPane.showInputDialog (frame,message)
+    disegno()
 
     
 def disegno():
-    global img,app,c,r,g,b,char
-    #C è una variabile di appogio per la conversione esadecimale di App
-    c=hex(app)
-    print(c)
-    img.loadPixels()
-    for i in range(100*100):
-        red(c)
-        green(c)
-        blue(c)
-        img.pixels[i]= (char(c),char(c),char(c))
-        img.updatePixels()
-        image(img,0,0)
+    global img,esa,lett,j
+    #esa contiene la conversione esadecimale di lett
+    esa=unhex(lett)
+    print(esa)
+    for i in range(50):
+        for j in range (50):
+            img.loadPixels()
+            img.pixels[i]= color(234,23,45)
+            img.updatePixels()
+            image(img,0,0)
