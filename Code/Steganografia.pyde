@@ -54,6 +54,7 @@ def disegno():
         pix=pix+widthpixel
         
         
+        
         print r
         print g
         print b
