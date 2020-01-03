@@ -1,0 +1,15 @@
+Correzione compito
+-Correttezza Codice (8): 
+  * il codice funziona
+
+-Chiarezza del Codice (4):
+   * buona: commenti e nomi variabili
+
+-Completezza del Codice (5):
+   * mancano la gestione del "riempimento" dell'ultima riga dell'immagine
+   * manca il decode
+
+-Originalità (7):
+   * hai usato l'input grafico
+   
+Voto finale: 6
